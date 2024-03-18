@@ -1,0 +1,92 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/tools/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 97366b67a0684200a20479968be1477f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xlconstant_v1_1_6 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L smartconnect_v1_0 -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_1 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot sim_axi_wr_behav xil_defaultlib.sim_axi_wr xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 's_axi_awid' [D:/xilinx_prj/xilinx_axi/ip_repo/axi_wr/axi_wr/axi_wr.srcs/sources_1/bd/axi_wr/ip/axi_wr_s_axi_mm_0_0/sim/axi_wr_s_axi_mm_0_0.v:191]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 's_axi_wuser' [D:/xilinx_prj/xilinx_axi/ip_repo/axi_wr/axi_wr/axi_wr.srcs/sources_1/bd/axi_wr/ip/axi_wr_s_axi_mm_0_0/sim/axi_wr_s_axi_mm_0_0.v:207]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 's_axi_arid' [D:/xilinx_prj/xilinx_axi/ip_repo/axi_wr/axi_wr/axi_wr.srcs/sources_1/bd/axi_wr/ip/axi_wr_s_axi_mm_0_0/sim/axi_wr_s_axi_mm_0_0.v:215]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 's_axi_aruser' [D:/xilinx_prj/xilinx_axi/ip_repo/axi_wr/axi_wr/axi_wr.srcs/sources_1/bd/axi_wr/ip/axi_wr_s_axi_mm_0_0/sim/axi_wr_s_axi_mm_0_0.v:225]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package ieee.std_logic_arith
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package smartconnect_v1_0.sc_util_v1_0_4_pkg
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module xpm.xpm_cdc_sync_rst(DEST_SYNC_FF=3,...
+Compiling module xpm.xpm_fifo_rst(COMMON_CLOCK=0,CDC_...
+Compiling module xpm.xpm_fifo_reg_bit
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=3,INIT...
+Compiling module xpm.xpm_fifo_reg_vec(REG_WIDTH=12)
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=5,INIT...
+Compiling module xpm.xpm_fifo_reg_vec(REG_WIDTH=13)
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=3,INIT...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(COMMON_CLOCK=0,FIF...
+Compiling module xpm.xpm_fifo_axis(CLOCKING_MODE="ind...
+Compiling module axis_data_fifo_v2_0_1.axis_data_fifo_v2_0_1_top(C_FAMI...
+Compiling module xil_defaultlib.axis_fifo_in
+Compiling module xil_defaultlib.axi_write_default
+Compiling module xil_defaultlib.axi_wr_axi_write_0_0
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture fdre_v of entity unisim.FDRE [\FDRE(init='1')\]
+Compiling architecture fdr_v of entity unisim.FDR [fdr_default]
+Compiling architecture implementation of entity lib_cdc_v1_0_2.cdc_sync [\cdc_sync(c_vector_width=2,c_mtb...]
+Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E(init="1111111111111111")...]
+Compiling architecture srl16_v of entity unisim.SRL16 [\SRL16(init="1111111111111111")(...]
+Compiling architecture imp of entity proc_sys_reset_v5_0_13.lpf [\lpf(c_ext_rst_width=4,c_aux_rst...]
+Compiling architecture imp of entity proc_sys_reset_v5_0_13.upcnt_n [\upcnt_n(c_size=6)\]
+Compiling architecture imp of entity proc_sys_reset_v5_0_13.sequence_psr [sequence_psr_default]
+Compiling architecture imp of entity proc_sys_reset_v5_0_13.proc_sys_reset [\proc_sys_reset(c_family="zynqup...]
+Compiling architecture axi_wr_proc_sys_reset_0_1_arch of entity xil_defaultlib.axi_wr_proc_sys_reset_0_1 [axi_wr_proc_sys_reset_0_1_defaul...]
+Compiling module xil_defaultlib.s_axi_mm_v1_0_S_AXI(C_S_AXI_ID_W...
+Compiling module xil_defaultlib.s_axi_mm_v1_0(C_S_AXI_ID_WIDTH=0...
+Compiling module xil_defaultlib.axi_wr_s_axi_mm_0_0
+Compiling module xlconstant_v1_1_6.xlconstant_v1_1_6_xlconstant(CON...
+Compiling module xil_defaultlib.bd_a70e_one_0
+Compiling architecture imp of entity proc_sys_reset_v5_0_13.lpf [\lpf(c_ext_rst_width=4,c_aux_rst...]
+Compiling architecture imp of entity proc_sys_reset_v5_0_13.proc_sys_reset [\proc_sys_reset(c_family="zynqup...]
+Compiling architecture bd_a70e_psr_aclk_0_arch of entity xil_defaultlib.bd_a70e_psr_aclk_0 [bd_a70e_psr_aclk_0_default]
+Compiling module xil_defaultlib.clk_map_imp_TUK7JH
+Compiling module xil_defaultlib.bd_a70e_m00e_0
+Compiling module xil_defaultlib.m00_exit_pipeline_imp_14UPZP2
+Compiling module xil_defaultlib.bd_a70e_m00s2a_0
+Compiling module xil_defaultlib.bd_a70e_s00a2s_0
+Compiling module xil_defaultlib.bd_a70e_s00mmu_0
+Compiling module xil_defaultlib.bd_a70e_s00sic_0
+Compiling module xil_defaultlib.bd_a70e_s00tr_0
+Compiling module xil_defaultlib.s00_entry_pipeline_imp_4GN65X
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_memory_sdpram(MEMORY_SIZE=49...
+Compiling module xil_defaultlib.bd_a70e_sawn_0
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_memory_sdpram(MEMORY_SIZE=73...
+Compiling module xil_defaultlib.bd_a70e_sbn_0
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_memory_sdpram(MEMORY_SIZE=22...
+Compiling module xil_defaultlib.bd_a70e_swn_0
+Compiling module xil_defaultlib.s00_nodes_imp_1KO167
+Compiling module xil_defaultlib.bd_a70e
+Compiling module xil_defaultlib.axi_wr_smartconnect_0_0
+Compiling module xil_defaultlib.axi_wr_xlconstant_0_0
+Compiling module xil_defaultlib.axi_wr
+Compiling module xil_defaultlib.sim_axi_wr
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sim_axi_wr_behav

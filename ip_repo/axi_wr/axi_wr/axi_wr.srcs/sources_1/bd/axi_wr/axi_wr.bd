@@ -1,0 +1,246 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x2CAF269B80F91F72",
+      "device": "xczu7ev-ffvc1156-2-e",
+      "name": "axi_wr",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "smartconnect_0": "",
+      "s_axi_mm_0": "",
+      "xlconstant_0": "",
+      "proc_sys_reset_0": "",
+      "axi_write_0": ""
+    },
+    "interface_ports": {
+      "s_axis": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "axi_wr_s_axis_aclk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "HAS_TKEEP": {
+            "value": "0"
+          },
+          "HAS_TLAST": {
+            "value": "0"
+          },
+          "HAS_TREADY": {
+            "value": "1"
+          },
+          "HAS_TSTRB": {
+            "value": "0"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "4"
+          },
+          "TDEST_WIDTH": {
+            "value": "0"
+          },
+          "TID_WIDTH": {
+            "value": "0"
+          },
+          "TUSER_WIDTH": {
+            "value": "0"
+          }
+        }
+      }
+    },
+    "ports": {
+      "s_axis_aclk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_BUSIF": {
+            "value": "s_axis",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "axi_wr_s_axis_aclk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "axis_wr_SRAM_count": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "frame_readen": {
+        "direction": "I"
+      },
+      "axis_rd_SRAM_count": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "frame_written": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "smartconnect_0": {
+        "vlnv": "xilinx.com:ip:smartconnect:1.0",
+        "xci_name": "axi_wr_smartconnect_0_0",
+        "parameters": {
+          "NUM_SI": {
+            "value": "1"
+          }
+        },
+        "interface_ports": {
+          "S00_AXI": {
+            "mode": "Slave",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "bridges": [
+              "M00_AXI"
+            ]
+          },
+          "M00_AXI": {
+            "mode": "Master",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          }
+        }
+      },
+      "s_axi_mm_0": {
+        "vlnv": "xilinx.com:user:s_axi_mm:1.0",
+        "xci_name": "axi_wr_s_axi_mm_0_0"
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "axi_wr_xlconstant_0_0"
+      },
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "xci_name": "axi_wr_proc_sys_reset_0_1"
+      },
+      "axi_write_0": {
+        "vlnv": "xilinx.com:user:axi_write:1.0",
+        "xci_name": "axi_wr_axi_write_0_0"
+      }
+    },
+    "interface_nets": {
+      "axi_write_0_m_axi_s2mm": {
+        "interface_ports": [
+          "axi_write_0/m_axi_s2mm",
+          "smartconnect_0/S00_AXI"
+        ]
+      },
+      "s_axis_1": {
+        "interface_ports": [
+          "s_axis",
+          "axi_write_0/s_axis"
+        ]
+      },
+      "smartconnect_0_M00_AXI": {
+        "interface_ports": [
+          "smartconnect_0/M00_AXI",
+          "s_axi_mm_0/S_AXI"
+        ]
+      }
+    },
+    "nets": {
+      "aclk_0_1": {
+        "ports": [
+          "s_axis_aclk",
+          "smartconnect_0/aclk",
+          "s_axi_mm_0/s_axi_aclk",
+          "proc_sys_reset_0/slowest_sync_clk",
+          "axi_write_0/s_axis_aclk",
+          "axi_write_0/m_axi_s2mm_aclk"
+        ]
+      },
+      "proc_sys_reset_0_peripheral_aresetn": {
+        "ports": [
+          "proc_sys_reset_0/peripheral_aresetn",
+          "s_axi_mm_0/s_axi_aresetn",
+          "axi_write_0/axi_aresetn"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "proc_sys_reset_0/ext_reset_in"
+        ]
+      },
+      "proc_sys_reset_0_interconnect_aresetn": {
+        "ports": [
+          "proc_sys_reset_0/interconnect_aresetn",
+          "smartconnect_0/aresetn"
+        ]
+      },
+      "frame_readen_1": {
+        "ports": [
+          "frame_readen",
+          "axi_write_0/frame_readen"
+        ]
+      },
+      "axis_rd_SRAM_count_1": {
+        "ports": [
+          "axis_rd_SRAM_count",
+          "axi_write_0/axis_rd_SRAM_count"
+        ]
+      },
+      "axi_write_0_axis_wr_SRAM_count": {
+        "ports": [
+          "axi_write_0/axis_wr_SRAM_count",
+          "axis_wr_SRAM_count"
+        ]
+      },
+      "axi_write_0_frame_written": {
+        "ports": [
+          "axi_write_0/frame_written",
+          "frame_written"
+        ]
+      }
+    },
+    "addressing": {
+      "/axi_write_0": {
+        "address_spaces": {
+          "m_axi_s2mm": {
+            "range": "4G",
+            "width": "32",
+            "segments": {
+              "SEG_s_axi_mm_0_S_AXI_mem": {
+                "address_block": "/s_axi_mm_0/S_AXI/S_AXI_mem",
+                "offset": "0x40000000",
+                "range": "64K"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

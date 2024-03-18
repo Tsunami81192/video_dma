@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../axi_wr.srcs/sources_1/bd/axi_wr/ipshared/1ddd/hdl/verilog" --include "../../../../axi_wr.srcs/sources_1/bd/axi_wr/ipshared/b2d0/hdl/verilog" --include "../../../../axi_wr.srcs/sources_1/bd/axi_wr/ip/axi_wr_axi_write_0_1/src/axis_fifo_in/hdl" --include "../../../../axi_wr.ip_user_files/ipstatic/hdl" --include "D:/tools/xilinx_2019/Vivado/2019.1/data/xilinx_vip/include" \
+"../../../../axi_wr.srcs/sources_1/ip/axis_fifo_in/sim/axis_fifo_in.v" \
+"../../../../axi_wr.srcs/sim_1/new/sim_axis_fifo.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

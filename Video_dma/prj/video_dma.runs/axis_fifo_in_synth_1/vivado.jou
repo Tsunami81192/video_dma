@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Mar 18 20:22:32 2024
+# Process ID: 13916
+# Current directory: D:/xilinx_prj/xilinx_axi/Video_dma/prj/video_dma.runs/axis_fifo_in_synth_1
+# Command line: vivado.exe -log axis_fifo_in.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source axis_fifo_in.tcl
+# Log file: D:/xilinx_prj/xilinx_axi/Video_dma/prj/video_dma.runs/axis_fifo_in_synth_1/axis_fifo_in.vds
+# Journal file: D:/xilinx_prj/xilinx_axi/Video_dma/prj/video_dma.runs/axis_fifo_in_synth_1\vivado.jou
+#-----------------------------------------------------------
+source axis_fifo_in.tcl -notrace

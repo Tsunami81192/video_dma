@@ -1,0 +1,90 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Wed Mar  6 21:07:30 2024
+| Host         : westlife running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file axi_read_control_sets_placed.rpt
+| Design       : axi_read
+| Device       : xczu7ev
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    12 |
+|    Minimum number of control sets                        |    12 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    16 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    12 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     9 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             179 |           45 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              62 |           21 |
+| Yes          | No                    | No                     |              64 |           17 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              91 |           30 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------+-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|        Clock Signal        |                                                     Enable Signal                                                     |                                                         Set/Reset Signal                                                         | Slice Load Count | Bel Load Count |
++----------------------------+-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  m_axi_mm2s_aclk_IBUF_BUFG | m_axi_mm2s_rlast_IBUF_inst/O                                                                                          | axi_rready0                                                                                                                      |                1 |              1 |
+|  m_axis_aclk_IBUF_BUFGCE   | video_out/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.rdpp1_inst/gen_fwft.count_en                   | video_out/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_rd_rst_ic_reg_1[0]               |                1 |              2 |
+|  m_axi_mm2s_aclk_IBUF_BUFG |                                                                                                                       | video_out/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state[4]_i_1_n_0 |                2 |              4 |
+|  m_axis_aclk_IBUF_BUFGCE   |                                                                                                                       | video_out/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_rd_rst_ic_reg_0                  |                8 |             18 |
+|  m_axis_aclk_IBUF_BUFGCE   | video_out/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[1] | video_out/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_rd_rst_ic_reg_0                  |               11 |             25 |
+|  m_axi_mm2s_aclk_IBUF_BUFG | read_pose                                                                                                             | axi_araddr                                                                                                                       |                4 |             26 |
+|  m_axi_mm2s_aclk_IBUF_BUFG | axi_rdcnt[0]_i_1_n_0                                                                                                  |                                                                                                                                  |                4 |             32 |
+|  m_axi_mm2s_aclk_IBUF_BUFG | axi_rready0                                                                                                           |                                                                                                                                  |               13 |             32 |
+|  m_axi_mm2s_aclk_IBUF_BUFG | video_out/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/ram_wr_en_i                           | video_out/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/wrst_busy                                        |               14 |             37 |
+|  m_axi_mm2s_aclk_IBUF_BUFG |                                                                                                                       | video_out/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/wrst_busy                                        |               11 |             40 |
+|  m_axis_aclk_IBUF_BUFGCE   |                                                                                                                       |                                                                                                                                  |               21 |             67 |
+|  m_axi_mm2s_aclk_IBUF_BUFG |                                                                                                                       |                                                                                                                                  |               32 |            112 |
++----------------------------+-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+
